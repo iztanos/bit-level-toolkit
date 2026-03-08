@@ -30,3 +30,13 @@ unsigned int clear_bit(unsigned int n, int pos) {
 unsigned int toggle_bit(unsigned int n, int pos) {
 	return (1u << pos) ^ n;
 }
+
+// Count bits
+unsigned int count_bits(unsigned int n) {
+	unsigned int count = 0;
+	while(n != 0) {
+		n = n & (n - 1);
+		count ++;
+	}
+	return count;
+}
