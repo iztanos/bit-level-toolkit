@@ -3,11 +3,10 @@
 
 int main(int argc, char* argv[]) {
 	
-	unsigned int n = 120;
-
-	printf("Decimal = %d\n", n);
-	printf("Binary = ");
-	print_binary(n);
-
+	if(argc != 3) {
+		printf("Usage: <number> <position>\n");
+		return 1;
+	}
+	//todo
 	return 0;
 }
