@@ -9,4 +9,6 @@ unsigned int clear_bit(unsigned int n, int pos);
 
 unsigned int toggle_bit(unsigned int n, int pos);
 
+unsigned int count_bits(unsigned int n);
+
 #endif
