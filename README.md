@@ -1,15 +1,7 @@
 # Bit-level Toolkit
 Ongoing - Last updated 3/9/2026
 
-Tiny C utilities for basic bit operations and a small test harness.
-
-Quick build & run
-
-# Bit-level Toolkit
-
 Small C utilities for inspecting and manipulating bits.
-
-Quick start
 
 ```bash
 gcc -I. tests/test_bit_ops.c bit_ops.c -o test_bit_ops
