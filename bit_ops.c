@@ -40,3 +40,16 @@ unsigned int count_bits(unsigned int n) {
 	}
 	return count;
 }
+
+// Prints the memory bytes of a variable
+void print_memory(void *ptr, size_t size) {
+	unsigned char *byte_pointer = (unsigned char*)ptr;
+
+	printf("Memory Layout\n");
+	
+	for(size_t i = 0; i < size; i++) {
+		
+		printf("Address: %p | ", (void*)(byte_pointer + 1));
+		printf("Value: 0x%.2x\n", byte_pointer[i]);
+	}
+}
