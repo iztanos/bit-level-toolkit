@@ -42,6 +42,10 @@ void run_tests() {
     print_memory(&n, sizeof(n));
     unsigned char *byte_pointer = (unsigned char*)&n;
     assert(*byte_pointer == 100);
+
+    // Test check endian
+    printf("\n");
+    check_endianness();
 }
 
 int main(void) {
