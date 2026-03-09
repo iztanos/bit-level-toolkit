@@ -13,4 +13,6 @@ unsigned int count_bits(unsigned int n);
 
 void print_memory(void *ptr, size_t size);
 
+void check_endianness();
+
 #endif
