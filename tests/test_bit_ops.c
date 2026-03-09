@@ -7,6 +7,7 @@ void run_tests() {
     printf("\n");
     printf("Original: "); 
     print_binary(n);
+    printf("\n");
     
     // Test Set
     n = 100; // 0110 0100
@@ -34,6 +35,13 @@ void run_tests() {
     unsigned int count = count_bits(n);
     printf("Number of 1 bits: %u\n", count);
     assert(count == 3);
+
+    // Test print_memory
+    n = 100; // 0110 0100
+    printf("\n");
+    print_memory(&n, sizeof(n));
+    unsigned char *byte_pointer = (unsigned char*)&n;
+    assert(*byte_pointer == 100);
 }
 
 int main(void) {
