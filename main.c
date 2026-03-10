@@ -24,11 +24,12 @@ void print_usage() {
 }
 
 int main(int argc, char* argv[]) {
-	char* command = argv[1];
+	
     if(argc < 2) {
         print_usage();
         return 1;
     }
+    char* command = argv[1];
 
     if(strcmp(command, "--print") == 0) {
         if(argc < 3) {
