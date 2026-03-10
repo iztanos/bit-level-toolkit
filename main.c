@@ -33,12 +33,18 @@ int main(int argc, char* argv[]) {
         unsigned int position = (unsigned int)atoi(argv[3]);
         unsigned int results = set_bit(value, position);
         print_binary(results);
-    } //else if(strcmp(command, "--clear") == 0 ) {
-        // arguement check todo
-        //unsigned int results = clear_bit(value, position);
-        //print_binary(results);
-    //} else {
-        //printf("AHHH\n");
-    //}
+    } else if(strcmp(command, "--clear") == 0 ) {
+        if(argc < 4) {
+            printf("Error: --clear requires a value and a position\n");
+            printf("Usage: ./bit-tool --clear [value] [position])\n");
+            return 1;
+        }
+        unsigned int value = (unsigned int)atoi(argv[2]);
+        unsigned int position = (unsigned int)atoi(argv[3]);
+        unsigned int results = clear_bit(value, position);
+        print_binary(results);
+    } else {
+        printf("Error: Unknown or invalid command\n");
+    }
 	return 0;
 }
