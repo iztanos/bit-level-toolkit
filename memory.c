@@ -21,8 +21,8 @@ void check_endianness() {
 	unsigned char *bytes = (unsigned char*)&x;
 
 	if(bytes[0] == 1) {
-		printf("The machine is little-endian\n");
+		printf("\nThe machine is little-endian\n");
 	} else {
-		printf("The machine is big-endian\n");
+		printf("\nThe machine is big-endian\n");
 	}	
 }
