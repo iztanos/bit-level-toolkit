@@ -14,6 +14,15 @@ $(TARGET): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# Test target: build and run the test harness
+TEST_BIN = tests/test_bit_ops
+
+test: $(TEST_BIN)
+	./$(TEST_BIN)
+
+$(TEST_BIN): tests/test_bit_ops.c bit_ops.c memory.c
+	$(CC) $(CFLAGS) tests/test_bit_ops.c bit_ops.c memory.c -o $(TEST_BIN)
+
 clean:
 	rm -f $(OBJ) $(TARGET)
 
