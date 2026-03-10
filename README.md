@@ -1,23 +1,25 @@
 # Bit-level Toolkit
-Ongoing - Last updated 3/9/2026
+Last updated 3/10/2026
 
 Small C utilities for inspecting and manipulating bits.
 
+Quick start (using make)
+
 ```bash
-gcc -I. tests/test_bit_ops.c bit_ops.c -o test_bit_ops
-./test_bit_ops
+cd bit-level-toolkit
+make        # builds the CLI `bit-tool`
+make test   # builds and runs the test harness
 ```
 
-Files
+What’s included
 
-- `bit_ops.h` / `bit_ops.c` — print binary, set/clear/toggle bits, count bits, memory helpers
-- `memory.h` / `memory.c` — placeholders
-- `main.c` — minimal CLI stub
-- `tests/test_bit_ops.c` — simple tests/assertions
+- `memory.c` / `bit_ops.c` — print binary, set/clear/toggle bits, count bits, memory helpers
+- `main.c` — CLI with simple commands (print, set, clear, toggle, count, memory, endian)
+- `tests/test_bit_ops.c` — assertions that exercise functionality
 
-Status
+License: MIT
 
-Core bit operations implemented and covered by the test harness. `main.c` and `memory.*` are incomplete.
+````
 
 
 
