@@ -49,7 +49,7 @@ void print_memory(void *ptr, size_t size) {
 	
 	for(size_t i = 0; i < size; i++) {
 		
-		printf("Address: %p | ", (void*)(byte_pointer + 1));
+		printf("Address: %p | ", (void*)(byte_pointer + i));
 		printf("Value: 0x%.2x\n", byte_pointer[i]);
 	}
 }
