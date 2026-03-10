@@ -23,11 +23,17 @@ int main(int argc, char* argv[]) {
         printf("Binary: ");
         print_binary(value);
         
-    } //else if(strcmp(command, "--set") == 0) {
-        // arguement check todo
-        //unsigned int results = set_bit(value, position);
-        //print_binary(results);
-    //} else if(strcmp(command, "--clear") == 0 ) {
+    } else if(strcmp(command, "--set") == 0) {
+        if(argc < 4) {
+            printf("Error: --set requires a value and a position\n");
+            printf("Usage: ./bit-tool --set [value] [position])\n");
+            return 1;
+        }
+        unsigned int value = (unsigned int)atoi(argv[2]);
+        unsigned int position = (unsigned int)atoi(argv[3]);
+        unsigned int results = set_bit(value, position);
+        print_binary(results);
+    } //else if(strcmp(command, "--clear") == 0 ) {
         // arguement check todo
         //unsigned int results = clear_bit(value, position);
         //print_binary(results);
