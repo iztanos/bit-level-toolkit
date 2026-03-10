@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "../bit_ops.h"
+#include "../memory.h"
 
 void run_tests() {
     unsigned int n = 100; // 0110 0100
